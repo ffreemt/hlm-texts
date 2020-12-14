@@ -1,0 +1,11 @@
+README.md
+setup.py
+hlm_texts/340-脂砚斋重批红楼梦.txt
+hlm_texts/__init__.py
+hlm_texts/david-hawks-the-story-of-the-stone.txt
+hlm_texts/load_text.py
+hlm_texts.egg-info/PKG-INFO
+hlm_texts.egg-info/SOURCES.txt
+hlm_texts.egg-info/dependency_links.txt
+hlm_texts.egg-info/requires.txt
+hlm_texts.egg-info/top_level.txt
