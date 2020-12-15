@@ -32,7 +32,7 @@ def load_text(filename: Union[str, Path]) -> str:
         raise
 
     # replace unicode spaces with normal space " "
-    cont = re.sub(r"[\u0020-\u3000]", " ", cont)
+    cont = re.sub(r"[\u3000]", " ", cont)
 
     _ = [elm.strip() for elm in cont.splitlines() if elm.strip()]
     return "\n".join(_)
