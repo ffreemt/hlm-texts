@@ -1,3 +1,5 @@
 .venv
 tests/__pycache__
 hlm_texts/__pycache__
+dist
+hlm_texts.egg-info
