@@ -9,13 +9,13 @@ This repo currently just has `340-脂砚斋重批红楼梦.txt` and `david-hawks
 ## Usage
 
 ```
-from hml_texts import hlm_en
-from hml_texts import hlm_zh
+from hlm_texts import hlm_en
+from hlm_texts import hlm_zh
 ```
 
 `hlm_zh` is a copy of `340-脂砚斋重批红楼梦.txt`
 
-`hml_en` is a copy of `david-hawks-the-story-of-the-stone.txt`
+`hlm_en` is a copy of `david-hawks-the-story-of-the-stone.txt`
 both with blank lines removed and paragraphs retaind.
 
 ## Notes
