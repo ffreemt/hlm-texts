@@ -4,6 +4,7 @@ load text with best effort to determine encoding
 
 from typing import Union
 from pathlib import Path
+import re
 
 import cchardet
 from logzero import logger
@@ -29,6 +30,9 @@ def load_text(filename: Union[str, Path]) -> str:
     except Exception as exc:
         logger.error(" read_text exc: %s", exc)
         raise
+
+    # replace unicode spaces with normal space " "
+    cont = re.sub(r"[\u0020-\u3000]", " ", cont)
 
     _ = [elm.strip() for elm in cont.splitlines() if elm.strip()]
     return "\n".join(_)

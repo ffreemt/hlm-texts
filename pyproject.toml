@@ -11,6 +11,8 @@ repository = "https://github.com/ffreemt/hlm-texts"
 python = "^3.7"
 cchardet = "^2.1.7"
 logzero = "^1.6.3"
+tqdm = "^4.54.1"
+streamlit = "^0.72.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
