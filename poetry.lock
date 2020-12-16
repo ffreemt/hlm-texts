@@ -442,6 +442,14 @@ version = "0.1.2"
 pygments = ">=2.4.1,<3"
 
 [[package]]
+category = "dev"
+description = "A small Python class to quickly measure the time taken while executing a block of indented lines"
+name = "linetimer"
+optional = false
+python-versions = "*"
+version = "0.1.4"
+
+[[package]]
 category = "main"
 description = "Colored symbols for various log levels for Python"
 name = "log-symbols"
@@ -1231,7 +1239,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "9e326e5ac090dbaaf0972356ed2730703f8b187aa996b0d519f9c9acd3b36ee4"
+content-hash = "f71c9933d4113d33011be5c366e4f46f1b715f9741afff5d873f3c73f0f060ca"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1451,6 +1459,10 @@ jupyter-core = [
 jupyterlab-pygments = [
     {file = "jupyterlab_pygments-0.1.2-py2.py3-none-any.whl", hash = "sha256:abfb880fd1561987efaefcb2d2ac75145d2a5d0139b1876d5be806e32f630008"},
     {file = "jupyterlab_pygments-0.1.2.tar.gz", hash = "sha256:cfcda0873626150932f438eccf0f8bf22bfa92345b814890ab360d666b254146"},
+]
+linetimer = [
+    {file = "linetimer-0.1.4-py2-none-any.whl", hash = "sha256:19ce9c6e6758873ed6c6260b81d7e902e97205f2775671285d404cb1d484d9fa"},
+    {file = "linetimer-0.1.4-py3-none-any.whl", hash = "sha256:7816ca0607d7f00662232cf06faccadc2494cbf59c81cf5c714cfac8a91cb35c"},
 ]
 log-symbols = [
     {file = "log_symbols-0.0.14-py3-none-any.whl", hash = "sha256:4952106ff8b605ab7d5081dd2c7e6ca7374584eff7086f499c06edd1ce56dcca"},
