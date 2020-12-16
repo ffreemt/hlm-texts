@@ -1,4 +1,5 @@
-"""Split text to sentences.
+"""
+Split text to sentences.
 
 Use sentence_splitter if supported,
 else use polyglot.text.Text
