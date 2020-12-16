@@ -13,6 +13,9 @@ cchardet = "^2.1.7"
 logzero = "^1.6.3"
 tqdm = "^4.54.1"
 streamlit = "^0.72.0"
+polyglot = "^16.7.4"
+sentence_splitter = "^1.4"
+pep257 = "^0.7.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

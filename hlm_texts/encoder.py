@@ -1,16 +1,27 @@
 """Encode sents in batch of size b_size."""
-from typing import Any, Optional
+from typing import Callable, Optional
 
 from tqdm.auto import trange
 import numpy as np
+from logzero import logger
 
-embed: Any = None
+# embed: Any = None
 
-def encoder(data: list, b_size: int = 100) -> np.ndarray:
+
+# fmt: off
+def encoder(
+        data: list,
+        b_size: int = 100,
+        embed: Optional[Callable] = None,
+) -> np.ndarray:
+    # fmt: on
     """Encode sents in batch of size b_size.
-
+    
     >>> assert encoder(['test']).shape == (1, 512)
     """
+    if embed is None:
+        logger.warning(" embed is None, return empty np.ndarray.")
+        return np.ndarray([0])
 
     b_size = 100
     len_ = len(data)
