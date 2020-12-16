@@ -1,6 +1,6 @@
-""" split text to sentences.
+""Split text to sentences.
 
-use sentence_splitter if supported,
+Use sentence_splitter if supported,
 else use polyglot.text.Text
 """
 
@@ -18,9 +18,9 @@ LANG_S = ["ca", "cs", "da", "nl", "en", "fi", "fr", "de",
 
 
 def seg_text(text: str, lang: Optional[str] = None) -> List[str]:
-    """ split text to sentences.
+    """Split text to sentences.
 
-    use sentence_splitter if supported,
+    Use sentence_splitter if supported,
     else use polyglot.text.Text
     """
     if lang is None:

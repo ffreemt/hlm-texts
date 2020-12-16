@@ -1,13 +1,15 @@
-""" encoder sents in batch of size b_size.
-"""
-from typing import Optional
+"""Encode sents in batch of size b_size."""
+from typing import Any, Optional
 
 from tqdm.auto import trange
 import numpy as np
 
+embed: Any = None
 
 def encoder(data: list, b_size: int = 100) -> np.ndarray:
-    """ encoder sents in batch of size b_size.
+    """Encode sents in batch of size b_size.
+
+    >>> assert encoder(['test']).shape == (1, 512)
     """
 
     b_size = 100

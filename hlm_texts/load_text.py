@@ -1,4 +1,4 @@
-"""load text with best effort to determine encoding."""
+"""Load text with best effort to determine encoding."""
 
 from typing import Union
 from pathlib import Path
@@ -9,7 +9,7 @@ from logzero import logger
 
 
 def load_text(filename: Union[str, Path]) -> str:
-    """load text for given filepath."""
+    """Load text for given filepath."""
     if not Path(filename).is_file():
         raise SystemExit(
             f"{Path(filename).resolve().as_posix()} does not exist or is not a file"

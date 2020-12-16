@@ -8,7 +8,7 @@ This repo currently just has `340-脂砚斋重批红楼梦.txt` and `david-hawks
 
 ## Usage
 
-```
+```python
 from hlm_texts import hlm_en, hlm_zh
 ```
 
