@@ -15,7 +15,8 @@ def encoder(
         embed: Optional[Callable] = None,
 ) -> np.ndarray:
     # fmt: on
-    """Encode sents in batch of size b_size.
+    """
+    Encode sents in batch of size b_size.
 
     >>> assert encoder(['test']).shape == (1, 512)
     """
