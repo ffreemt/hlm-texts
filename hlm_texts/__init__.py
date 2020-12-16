@@ -1,4 +1,4 @@
-""" init """
+"""init."""
 from pathlib import Path
 from .load_text import load_text
 
