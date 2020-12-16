@@ -2,7 +2,7 @@
 from pathlib import Path
 from .load_text import load_text
 
-__version__ = "0.1.1"
+__version__ = "0.1.3"
 
 # pylint: disable=invalid-name
 cdir = Path(__file__).parent

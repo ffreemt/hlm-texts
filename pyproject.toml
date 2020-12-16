@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hlm-texts"
-version = "0.1.1"
+version = "0.1.3-alpha.0"
 description = ""
 authors = ["freemt"]
 license = "MIT"
@@ -12,12 +12,9 @@ python = "^3.7"
 cchardet = "^2.1.7"
 logzero = "^1.6.3"
 tqdm = "^4.54.1"
-streamlit = "^0.72.0"
 polyglot = "^16.7.4"
 sentence_splitter = "^1.4"
 Morfessor = "^2.0.6"
-pycld2 = {path = "../../../../../../dl/python-packages/pycld2-0.41-cp37-cp37m-win_amd64.whl"}
-pyicu = {path = "../../../../../../dl/python-packages/PyICU-2.4.3-cp37-cp37m-win_amd64.whl"}
 halo = "^0.0.31"
 
 [tool.poetry.dev-dependencies]
@@ -25,6 +22,8 @@ pytest = "^5.2"
 pep257 = "^0.7.0"
 pydocstyle = "^5.1.1"
 linetimer = "^0.1.4"
+streamlit = "^0.72.0"
+flake8 = "^3.8.4"
 
 [build-system]
 requires = ["poetry>=0.12"]
