@@ -14,10 +14,15 @@ from sentence_splitter import split_text_into_sentences
 LANG_S = ["ca", "cs", "da", "nl", "en", "fi", "fr", "de",
           "el", "hu", "is", "it", "lv", "lt", "no", "pl",
           "pt", "ro", "ru", "sk", "sl", "es", "sv", "tr"]
-# fmt: on
 
 
-def seg_text(text: str, lang: Optional[str] = None, qmode: bool = False, maxlines: int = 1000) -> List[str]:
+def seg_text(
+        text: str,
+        lang: Optional[str] = None,
+        qmode: bool = False,
+        maxlines: int = 1000
+) -> List[str]:
+    # fmt: on
     """
     Split text to sentences.
 
