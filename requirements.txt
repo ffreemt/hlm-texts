@@ -1,0 +1,13 @@
+cchardet==2.1.7
+colorama==0.4.4
+halo==0.0.31
+log-symbols==0.0.14
+logzero==1.6.3
+morfessor==2.0.6
+polyglot==16.7.4
+regex==2020.11.13
+sentence-splitter==1.4
+six==1.15.0
+spinners==0.0.24
+termcolor==1.1.0
+tqdm==4.54.1

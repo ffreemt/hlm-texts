@@ -1,6 +1,7 @@
 """Init."""
 from pathlib import Path
 from .load_text import load_text
+from .seg_text import seg_text
 
 __version__ = "0.1.3"
 

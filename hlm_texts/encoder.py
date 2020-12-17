@@ -17,6 +17,10 @@ def encoder(
     # fmt: on
     """Encode sents in batch of size b_size.
 
+    b_size for memory management when using google-use embed,
+    the other embed has its own batch
+    management, b_size wont affect memory management too much
+
     >>> assert encoder(['test']).shape == (1, 512)
     """
     if embed is None:
@@ -25,8 +29,8 @@ def encoder(
 
     b_size = 100
     len_ = len(data)
-    # quo, rem = divmod(len_, b_size)
-    quo, _ = divmod(len_, b_size)
+    quo, rem = divmod(len_, b_size)
+    # quo, _ = divmod(len_, b_size)
 
     # abcnews 1082168, ~9 hours in duanzi
     # misinformation abstract, 5501, ~30 min
@@ -42,11 +46,12 @@ def encoder(
             encoded_data = np.concatenate((encoded_data, _), axis=0)
 
     # rem part
-    _ = data[quo * b_size:]
-    _ = np.array([elm for elm in embed(_)]).astype("float32")
-    if encoded_data is None:
-        encoded_data = _
-    else:
-        encoded_data = np.concatenate((encoded_data, _), axis=0)
+    if rem:
+        _ = data[quo * b_size:]
+        _ = np.array([elm for elm in embed(_)]).astype("float32")
+        if encoded_data is None:
+            encoded_data = _
+        else:
+            encoded_data = np.concatenate((encoded_data, _), axis=0)
 
     return encoded_data
