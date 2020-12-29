@@ -8,3 +8,4 @@ embed.py
 joblib
 joblib-testrun.py
 .gitignore
+run-check-all.bat

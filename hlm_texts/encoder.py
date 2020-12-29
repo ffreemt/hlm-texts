@@ -11,8 +11,8 @@ from logzero import logger
 # fmt: off
 def encoder(
         data: list,
-        b_size: int = 100,
         embed: Optional[Callable] = None,
+        b_size: int = 100,
 ) -> np.ndarray:
     # fmt: on
     """Encode sents in batch of size b_size.
@@ -39,7 +39,7 @@ def encoder(
     # quo part
     for i in trange(quo):
         _ = data[i * b_size: (i + 1) * b_size]
-        _ = np.array([elm for elm in embed(_)]).astype("float32")
+        _ = np.array(elm for elm in embed(_)).astype("float32")
         if encoded_data is None:
             encoded_data = _
         else:
@@ -48,7 +48,7 @@ def encoder(
     # rem part
     if rem:
         _ = data[quo * b_size:]
-        _ = np.array([elm for elm in embed(_)]).astype("float32")
+        _ = np.array(elm for elm in embed(_)).astype("float32")
         if encoded_data is None:
             encoded_data = _
         else:

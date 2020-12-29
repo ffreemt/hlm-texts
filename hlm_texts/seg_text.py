@@ -42,7 +42,8 @@ def seg_text(
     if not qmode and lang in LANG_S:
         _ = []
         lines = text.splitlines()
-        if maxlines > 1 and len(lines) > maxlines:
+        # if maxlines > 1 and len(lines) > maxlines:
+        if len(lines) > maxlines > 1:
             for para in tqdm(lines):
                 if para.strip():
                     _.extend(split_text_into_sentences(para, lang))
