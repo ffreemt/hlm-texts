@@ -23,7 +23,7 @@ E.g.
 Then use `poetry` or `pip` to install ` PyICU pycld2 Morfessor`, e.g.
 ```bash
 pip install PyICU pycld2 Morfessor
-```bash
+```
 or
 ```python
 poetry add PyICU pycld2 Morfessor
