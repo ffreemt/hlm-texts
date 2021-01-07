@@ -2,6 +2,7 @@
 from pathlib import Path
 from .load_text import load_text
 from .seg_text import seg_text
+from .sent_tokenizer import sent_tokenizer
 
 __version__ = "0.1.3"
 
@@ -15,4 +16,16 @@ hlm_en2 = load_text(cdir / "joly-hlm.txt")
 fangfang_en = load_text(cdir / "fangfang-en.txt")
 fangfang_zh = load_text(cdir / "fangfang-zh.txt")
 
-__all__ = ("load_text", "seg_text")
+# hlm_zh_sents = sent_tokenizer(hlm_zh, 'zh')
+# hlm_en_sents = sent_tokenizer(hlm_en, 'en')
+# hlm_en1_sents = sent_tokenizer(hlm_en1, 'en')
+# hlm_en2_sents = sent_tokenizer(hlm_en2, 'en')
+
+# fangfang_en_sents = sent_tokenizer(fangfang_en, 'en')
+# fangfang_zh_sents = sent_tokenizer(fangfang_zh, 'zh')
+
+__all__ = (
+    "load_text", 
+    "seg_text", 
+    "sent_tokenizer",
+)

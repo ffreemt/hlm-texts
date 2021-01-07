@@ -44,10 +44,20 @@ pip install -r requirements.text
 ## Usage
 
 ```python
-from hlm_texts import hlm_en, hlm_zh
+from hlm_texts import hlm_en, hlm_zh, hlm_en1, hlm_en2
 ```
 
 `hlm_zh` and `hlm_en` are copies of `340-脂砚斋重批红楼梦.txt` and `david-hawks-the-story-of-the-stone.txt`, respectively, with blank lines removed and paragraphs retaind.
+
+`sent_tokenizer`: to tokenize text or list of texts
+```python
+from hlm_texts import sent_tokenizer, hlm_en
+
+hlm_en_sents = sent_tokenizer(hlm_en, lang="en")
+```
+Tokenizing long English texts for the first time can take a while (3-5 minutes for hlm_en, hlm_en1, hlm_en2). Subsequent operations are, however, instant since ``sent_tokenizer`` is cached in ``~/joblib_cache`` (\Users\xyz\joblib_cache` for `Windows 10`).
+
+<b> test </b>
 
 ## Notes
 The repo is for study purpose only. If you believe that your interests have been violated in any way, please let me know. I'll promptly follow it up with appropriate actions.

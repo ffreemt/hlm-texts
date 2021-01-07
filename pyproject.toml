@@ -8,7 +8,7 @@ readme = "README.md"
 repository = "https://github.com/ffreemt/hlm-texts"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.6.1"
 cchardet = "^2.1.7"
 logzero = "^1.6.3"
 tqdm = "^4.54.1"
