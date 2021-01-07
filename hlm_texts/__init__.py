@@ -4,7 +4,7 @@ from .load_text import load_text
 from .seg_text import seg_text
 from .sent_tokenizer import sent_tokenizer
 
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 # pylint: disable=invalid-name
 cdir = Path(__file__).parent
@@ -25,7 +25,7 @@ fangfang_zh = load_text(cdir / "fangfang-zh.txt")
 # fangfang_zh_sents = sent_tokenizer(fangfang_zh, 'zh')
 
 __all__ = (
-    "load_text", 
-    "seg_text", 
+    "load_text",
+    "seg_text",
     "sent_tokenizer",
 )
