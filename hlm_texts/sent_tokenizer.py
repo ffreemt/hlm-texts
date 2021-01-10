@@ -1,5 +1,5 @@
-"""Tokenizer str|List[str] to sents."""
-# pylint:
+"""Tokenize str|List[str] to sents."""
+# pylint: disable=unused-argument
 
 from typing import (
     List,
@@ -11,19 +11,20 @@ from pathlib import Path
 from joblib import Memory
 from polyglot.text import Detector
 
-from .seg_text import seg_text
+from hlm_texts.seg_text import seg_text
 
 memory = Memory(location=Path("~/joblib_cache").expanduser())
 
 
 # fmt: off
-@memory.cache
-def sent_tokenizer(
+# @memory.cache(ignore=['debug'])
+def _sent_tokenizer(
         text: Union[str, List[str]],
         lang: Optional[str] = None,
+        debug: bool = False,  # when True, diable joblib.Memory.cache
 ) -> List[str]:
-    """Tokenizer str|List[str] to sents."""
     # fmt: on
+    """Tokenize str|List[str] to sents."""
     if isinstance(text, str):
         text = [text]
 
@@ -35,3 +36,6 @@ def sent_tokenizer(
         res.extend(seg_text(elm, lang=lang))
 
     return res
+
+
+sent_tokenizer = memory.cache(_sent_tokenizer, ignore=['debug'])
