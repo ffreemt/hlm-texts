@@ -10,6 +10,7 @@ from typing import (
 from pathlib import Path
 from joblib import Memory
 from polyglot.text import Detector
+from logzero import logger
 
 from hlm_texts.seg_text import seg_text
 
@@ -29,7 +30,12 @@ def _sent_tokenizer(
         text = [text]
 
     if lang is None:
-        lang = Detector(" ".join(text)).language.code
+        try:
+            lang = Detector(" ".join(text)).language.code
+        except Exception as exc:
+            logger.warning("polyglot.text.Detector exc: %s, setting to 'en'", exc)
+            logger.info(" Try to pass lang (e.g. lang='en') to sent_tokenizer")
+            lang = 'en'
 
     res = []
     for elm in text:

@@ -6,8 +6,15 @@ else use polyglot.text.Text
 from typing import List, Optional
 
 from tqdm.auto import tqdm
+from polyglot.detect.base import logger as polyglot_logger
 from polyglot.text import Detector, Text
 from sentence_splitter import split_text_into_sentences
+
+from logzero import logger
+
+# turn of polyglot.text.Detector warning
+polyglot_logger.setLevel("ERROR")
+
 
 # fmt: off
 # use sentence_splitter if supported
@@ -37,7 +44,11 @@ def seg_text(
         set to <1 or a large number to turn it off
     """
     if lang is None:
-        lang = Detector(text).language.code
+        try:
+            lang = Detector(text).language.code
+        except Exception as exc:
+            logger.warning("polyglot.text.Detector exc: %s, setting to 'en'", exc)
+            lang = "en"
 
     if not qmode and lang in LANG_S:
         _ = []

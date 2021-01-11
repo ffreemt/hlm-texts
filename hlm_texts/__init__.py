@@ -4,7 +4,7 @@ from .load_text import load_text
 from .seg_text import seg_text
 from .sent_tokenizer import sent_tokenizer
 
-__version__ = "0.1.4"
+__version__ = "0.1.6"
 
 # pylint: disable=invalid-name
 cdir = Path(__file__).parent

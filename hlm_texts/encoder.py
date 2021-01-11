@@ -1,8 +1,9 @@
 """Encode sents in batch of size b_size."""
-from typing import Callable, Optional
+from typing import Callable, Iterable, Optional
 
-from tqdm.auto import trange
+from tqdm.auto import tqdm  # trange
 import numpy as np
+import more_itertools as mit
 from logzero import logger
 
 # embed: Any = None
@@ -10,7 +11,8 @@ from logzero import logger
 
 # fmt: off
 def encoder(
-        data: list,
+        # data: list,
+        data: Iterable[str],
         embed: Optional[Callable] = None,
         b_size: int = 100,
 ) -> np.ndarray:
@@ -27,14 +29,23 @@ def encoder(
         logger.warning(" embed is None, return empty np.ndarray.")
         return np.ndarray([0])
 
-    b_size = 100
-    len_ = len(data)
-    quo, rem = divmod(len_, b_size)
-    # quo, _ = divmod(len_, b_size)
-
     # abcnews 1082168, ~9 hours in duanzi
     # misinformation abstract, 5501, ~30 min
     encoded_data: Optional[np.ndarray] = None
+
+    for _ in tqdm(mit.chunked(data, b_size)):
+        _ = list(_)
+        _ = np.array(embed(_)).astype("float32")
+        if encoded_data is None:
+            encoded_data = _
+        else:
+            encoded_data = np.concatenate((encoded_data, _), axis=0)
+
+    _ = """
+    # b_size = 100
+    len_ = len(data)
+    quo, rem = divmod(len_, b_size)
+    # quo, _ = divmod(len_, b_size)
 
     # quo part
     for i in trange(quo):
@@ -53,5 +64,6 @@ def encoder(
             encoded_data = _
         else:
             encoded_data = np.concatenate((encoded_data, _), axis=0)
+    # """
 
     return encoded_data

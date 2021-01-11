@@ -1,5 +1,5 @@
 [[package]]
-category = "main"
+category = "dev"
 description = "Abseil Python Common Libraries, see https://github.com/abseil/abseil-py."
 name = "absl-py"
 optional = false
@@ -1477,7 +1477,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pytest (>=3.5,<3.7.3 || >3.7.3)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pytest-cov", "jaraco.test (>=3.2.0)", "jaraco.itertools", "func-timeout", "pytest-black (>=0.3.7)", "pytest-mypy"]
 
 [metadata]
-content-hash = "cc266032233c4f118883352c3bc74d5b890b51ad9e3e28a71c3625a48329ab1f"
+content-hash = "e9b4c0eae30b3be34e5f6618a3b08d0474153b391d4e6b39fec2b1a09af86abc"
 python-versions = "^3.6.1"
 
 [metadata.files]
