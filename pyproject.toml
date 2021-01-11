@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hlm-texts"
-version = "0.1.5"
+version = "0.1.6"
 description = ""
 authors = ["freemt"]
 license = "MIT"
