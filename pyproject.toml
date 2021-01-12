@@ -16,6 +16,8 @@ polyglot = "^16.7.4"
 sentence_splitter = "^1.4"
 Morfessor = "^2.0.6"
 halo = "^0.0.31"
+more-itertools = "^8.6.0"
+joblib = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -24,7 +26,6 @@ pydocstyle = "^5.1.1"
 linetimer = "^0.1.4"
 streamlit = "^0.72.0"
 flake8 = "^3.8.4"
-sentence_transformers = "^0.3.9"
 pipdeptree = "^1.0.0"
 absl-py = "^0.11.0"
 
