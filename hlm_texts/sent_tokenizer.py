@@ -14,7 +14,7 @@ from logzero import logger
 
 from hlm_texts.seg_text import seg_text
 
-memory = Memory(location=Path("~/joblib_cache").expanduser())
+memory = Memory(location=Path("~/joblib_cache").expanduser(), verbose=0)
 
 
 # fmt: off
