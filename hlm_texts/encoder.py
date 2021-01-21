@@ -1,7 +1,10 @@
 """Encode sents in batch of size b_size."""
 from typing import Callable, Iterable, Optional
 
-from tqdm.auto import tqdm  # trange
+# from tqdm.auto import tqdm  # trange
+# .auto does not seem to work well with upyterlab
+from tqdm import tqdm
+
 import numpy as np
 import more_itertools as mit
 from logzero import logger
@@ -26,7 +29,8 @@ def encoder(
     >>> assert encoder(['test']).shape == (1, 512)
     """
     if embed is None:
-        logger.warning(" embed is None, return empty np.ndarray.")
+        logger.error(" embed is None, return empty np.ndarray.")
+        logger.error("You need to plug in some embed method")
         return np.ndarray([0])
 
     # abcnews 1082168, ~9 hours in duanzi

@@ -4,8 +4,9 @@ from .load_text import load_text
 from .seg_text import seg_text
 from .sent_tokenizer import sent_tokenizer, _sent_tokenizer
 from .gen_tokens import gen_tokens, list_tokens
+from .encoder import encoder
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 
 # pylint: disable=invalid-name
 cdir = Path(__file__).parent
@@ -32,4 +33,5 @@ __all__ = (
     "_sent_tokenizer",
     "gen_tokens",
     "list_tokens",
+    "encoder",
 )
