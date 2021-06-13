@@ -6,6 +6,7 @@ authors = ["freemt"]
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/ffreemt/hlm-texts"
+include = ["LICENSE",]
 
 [tool.poetry.dependencies]
 python = "^3.6.1"
@@ -28,6 +29,7 @@ streamlit = "^0.72.0"
 flake8 = "^3.8.4"
 pipdeptree = "^1.0.0"
 absl-py = "^0.11.0"
+tbump = "^6.3.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
