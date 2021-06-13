@@ -2,6 +2,10 @@
 
 Use sentence_splitter if supported,
 else use polyglot.text.Text
+
+!apt install libicu-dev
+!install pyicu pycld2 Morfessor
+!pip install polyglot sentence_splitter
 """
 from typing import List, Optional
 

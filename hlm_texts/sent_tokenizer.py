@@ -22,7 +22,7 @@ memory = Memory(location=Path("~/joblib_cache").expanduser(), verbose=0)
 def _sent_tokenizer(
         text: Union[str, List[str]],
         lang: Optional[str] = None,
-        debug: bool = False,  # when True, diable joblib.Memory.cache
+        debug: bool = False,  # when True, disable joblib.Memory.cache
 ) -> List[str]:
     # fmt: on
     """Tokenize str|List[str] to sents."""

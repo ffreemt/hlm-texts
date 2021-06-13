@@ -8,7 +8,7 @@ This repo currently just has
   * `yang-hlm.txt`: hlm_en1
   * `joly-hlm.txt`: hlm_en2
 
-It may expand to other versions. If you wish to have one particular version included, make a `pull request` (fork, upload files and click the pull request button) or provide a text file to me.
+It may be expanded to other versions. If you wish to have one particular version included, make a `pull request` (fork, upload files and click the pull request button) or provide a text file to me.
 
 ## Special Dependencies
 
