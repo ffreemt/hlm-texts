@@ -6,7 +6,7 @@ from .sent_tokenizer import sent_tokenizer, _sent_tokenizer
 from .gen_tokens import gen_tokens, list_tokens
 from .encoder import encoder
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 # pylint: disable=invalid-name
 cdir = Path(__file__).parent
