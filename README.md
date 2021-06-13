@@ -36,7 +36,17 @@ Download and install the `pyicu` and `pycld2` (possibly also `Morfessor`) whl pa
 
 ## Installation
 
-`pip install hlm-texts`
+```bash
+pip install hlm-texts
+
+# pip install hlm-texts -U  # to upgrade to the newest version
+```
+
+or install the newest version
+```
+pip install git+https://github.com/ffreemt/hlm-texts
+```
+
 or git clone the repo and install from the source
 ```bash
 git clone
